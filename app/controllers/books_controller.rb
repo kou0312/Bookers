@@ -14,10 +14,11 @@ class BooksController < ApplicationController
 
   def show
     @list = Book.find(params[:id])
+    @books = Book.all
   end
 
   def edit
-
+    @list = Book.find(params[:id])
   end
 
   def new
