@@ -8,7 +8,7 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
     book.save
-    redirect_to '/books/:id'
+    redirect_to show_path(book.id)
   end
 
 
@@ -27,6 +27,11 @@ class BooksController < ApplicationController
     redirect_to show_path(book.id)
   end
 
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_back(fallback_location: index_path)
+  end
 
   def new
 
