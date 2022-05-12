@@ -13,6 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-color: #fff;
+   color: #333;
+   font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 13px;
+   line-height: 18px;
+   margin: 33px;
+ }
+
 div#errors_explanation {
   width: 450px;
   border: 2px solid red;
@@ -33,10 +43,9 @@ h2.error {
     color: #fff;
 }
 
-.field {
-   display: flex;
-   flex-direction:column;
- }
+div.field {
+  margin-bottom: 10px;
+}
 
 input#book_title {
   width: 147px;
@@ -51,4 +60,38 @@ input#book_title {
 .field_with_errors {
   background-color: #FF0000;
   padding: 2px;
+  display: table;
+}
+
+label {
+  display: block
+}
+
+div.actions {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #000;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding-bottom: 7px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+p {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  margin: 33px;
+}
+
+p.no {
+  color: green;
 }
