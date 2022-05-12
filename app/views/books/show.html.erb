@@ -1,10 +1,6 @@
-<p id="notice">Book was successfully created.</p>
+<p><%= notice %></p>
 
-
-
-    <tr>
-      <td><strong>Title</strong><%= @list.title %></td>
-      <td><strong>Body</strong><%= @list.body %></td>
-      <td><%= link_to 'Edit', edit_path(@list.id) %></td>
-      <td><%= link_to 'Back', "/books" %></td>
-    </tr>
+<p><strong>Title</strong><%= @list.title %></p>
+<p><strong>Body</strong><%= @list.body %></p>
+<%= link_to 'Edit', edit_path(@list.id) %>
+<%= link_to 'Back', "/books" %>
