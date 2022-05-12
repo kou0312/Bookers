@@ -40,6 +40,7 @@ class BooksController < ApplicationController
     book = Book.find(params[:id])
     book.destroy
     redirect_back(fallback_location: index_path)
+    flash[:notice] = "Book was successfully destroyd."
   end
 
   def new
