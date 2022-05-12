@@ -28,25 +28,26 @@
 <h2>New book</h2>
 <%= form_with model: @book do |f| %>
   <% if @book.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+    <div id="errors_explanation">
+      <h2 class="error"><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
       <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
+
   <% end %>
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  </div>
+
   <div class="field">
-    <%= f.label :body %><br>
+    <%= f.label :body %>
     <%= f.text_area :body %>
   </div>
+
   <div class="actions">
     <input type="submit" name="commit" value="Create Book" data-disable-with="Create Book">
   </div>
